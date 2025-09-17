@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth; scroll-padding-top: 4rem;">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Content Workflow Manager</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              'primary': '#4f46e5', // indigo-600
+              'primary-dark': '#4338ca', // indigo-700
+              'secondary': '#f97316', // orange-500
+              'light': '#f8fafc', // slate-50
+              'medium': '#f1f5f9', // slate-100
+            },
+            animation: {
+              'marquee': 'marquee 30s linear infinite',
+              'gradient-shift': 'gradient-shift 15s ease infinite',
+              'blob-1': 'blob-move-1 20s infinite',
+              'blob-2': 'blob-move-2 25s infinite',
+            },
+            keyframes: {
+              marquee: {
+                '0%': { transform: 'translateX(0%)' },
+                '100%': { transform: 'translateX(-100%)' },
+              },
+              'gradient-shift': {
+                '0%, 100%': { 'background-position': '0% 50%' },
+                '50%': { 'background-position': '100% 50%' },
+              },
+              'blob-move-1': {
+                '0%, 100%': { transform: 'translate(0px, 0px) scale(1)' },
+                '25%': { transform: 'translate(40px, -60px) scale(1.1)' },
+                '50%': { transform: 'translate(-30px, 30px) scale(0.9)' },
+                '75%': { transform: 'translate(60px, 50px) scale(1.2)' },
+              },
+              'blob-move-2': {
+                '0%, 100%': { transform: 'translate(0px, 0px) scale(1)' },
+                '25%': { transform: 'translate(-50px, 20px) scale(0.9)' },
+                '50%': { transform: 'translate(40px, 80px) scale(1.2)' },
+                '75%': { transform: 'translate(20px, -40px) scale(1.1)' },
+              },
+            },
+          },
+        },
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.19.0",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "xlsx": "https://cdn.jsdelivr.net/npm/xlsx@0.18.5/xlsx.mjs"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-light dark:bg-slate-900">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

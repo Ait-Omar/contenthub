@@ -1,0 +1,5 @@
+{
+  "name": "VA Publishing Analytics",
+  "description": "An analytics dashboard to track daily articles published by Virtual Assistants across multiple WordPress blogs.",
+  "requestFramePermissions": []
+}
